@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trendbaaz - Your T-Shirt Brand</title>
+    <link rel="stylesheet" href="index.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="index_images/fav.png" type="image/x-icon">
+</head>
+<body>
+
+    <header class="sticky-header">
+        <div class="logo">
+            <a href="index.html">trendBaaZ</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collection.html">Collection</a></li>
+                <li class="dropdown">
+                    <a href="categories.html">Categories <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="category-graphic-tees.html">Graphic Tees</a></li>
+                        <li><a href="category-plain-tees.html">Plain Tees</a></li>
+                        <li><a href="category-long-sleeves.html">Long Sleeves</a></li>
+                        <li><a href="category-hoodies.html">Hoodies</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Search products...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <a href="account.html" title="Account" class="account-link">
+                <i class="fas fa-user"></i>
+            </a>
+            <a href="cart.html" title="Cart" class="cart-link">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="banner">
+        <img src="index_images/banner.png" alt="Main Sale Banner">
+    </div>
+
+    <section class="usp-section">
+        <div class="usp-item">
+            <img src="index_images/like.gif" alt="Quality Guarantee">
+            <div class="usp-text">
+                <h3>Quality</h3>
+                <p>Guarantee</p>
+            </div>
+        </div>
+        <div class="usp-item">
+            <img src="index_images/vibrant.gif" alt="Vibrant Print">
+            <div class="usp-text">
+                <h3>Vibrant</h3>
+                <p>Print</p>
+            </div>
+        </div>
+        <div class="usp-item">
+            <img src="index_images/free.gif" alt="Free Express Delivery">
+            <div class="usp-text">
+                <h3>Free Express</h3>
+                <p>Delivery</p>
+            </div>
+        </div>
+        <div class="usp-item">
+            <img src="index_images/replacment.gif" alt="7-day Replacement">
+            <div class="usp-text">
+                <h3>7-day</h3>
+                <p>Replacement</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-products-section">
+        <h2>Sale Is Live</h2>
+        <div class="featured-products-grid">
+            <div class="featured-product-card quick-view-card"
+                 data-product-id="awesome-a"
+                 data-product-name="Find Your Own Magic"
+                 data-product-price="500"
+                 data-product-image="index_images/t-shirt/1.png"
+                 data-short-description="Express your unique style with this inspiring 'Believe In Magic' tee. Features a vibrant graphic print on soft, comfortable cotton.">
+                <div class="product-label new-launch">New Launch</div>
+                <img src="index_images/t-shirt/1.png" alt="Black t-shirt with 'Believe in Magic' graphic print" loading="lazy">
+                <h3>Find Your Own Magic</h3> <div class="price-container">
+                    <span class="current-price">₹500</span>
+                    <span class="original-price-animated">₹1000</span>
+                </div>
+                <p class="discount">50% off</p>
+                <button class="add-to-cart-btn" data-product-id="awesome-a" data-product-name="Find Your Own Magic" data-product-price="500" data-product-image="index_images/t-shirt/1.png">Add to Cart</button>
+                <button class="quick-view-btn" data-product-id="awesome-a" data-product-name="Find Your Own Magic" data-product-price="500" data-product-image="index_images/t-shirt/1.png">Quick View</button>
+            </div>
+
+            <div class="featured-product-card quick-view-card"
+                  data-product-id="good-vibes"
+                  data-product-name="Good Vibes Only"
+                  data-product-price="550"
+                  data-product-image="index_images/t-shirt/2.png"
+                  data-short-description="Spread positivity effortlessly with the 'Good Vibes Only' tee. Comfortable fit and a design that makes you feel great.">
+                 <div class="product-label">New</div>
+                 <img src="index_images/t-shirt/2.png" alt="T-shirt with 'Good Vibes Only' text" loading="lazy">
+                 <h3>Good Vibes Only</h3> <div class="price-container">
+                     <span class="current-price">₹550</span>
+                     <span class="original-price-animated">₹1100</span>
+                 </div>
+                 <p class="discount">50% off</p>
+                 <button class="add-to-cart-btn" data-product-id="good-vibes" data-product-name="Good Vibes Only" data-product-price="550" data-product-image="index_images/t-shirt/2.png">Add to Cart</button>
+                 <button class="quick-view-btn" data-product-id="good-vibes" data-product-name="Good Vibes Only" data-product-price="550" data-product-image="index_images/t-shirt/2.png">Quick View</button>
+             </div>
+
+            <div class="featured-product-card quick-view-card"
+                 data-product-id="feel-the-rush"
+                 data-product-name="Feel the Rush, Wear the Speed"
+                 data-product-price="520"
+                 data-product-image="index_images/t-shirt/3.png"
+                 data-short-description="Feel the adrenaline! This 'Feel the Rush, Wear the Speed' tee combines comfort with a dynamic design.">
+                <div class="product-label bestseller">Bestseller</div>
+                <img src="index_images/t-shirt/3.png" alt="Cool T-Shirt B" loading="lazy">
+                <h3>Feel the Rush, Wear the Speed</h3> <div class="price-container">
+                    <span class="current-price">₹520</span>
+                    <span class="original-price-animated">₹1300</span>
+                </div>
+                <p class="discount">60% off</p>
+                <button class="add-to-cart-btn" data-product-id="feel-the-rush" data-product-name="Feel the Rush, Wear the Speed" data-product-price="520" data-product-image="index_images/t-shirt/3.png">Add to Cart</button>
+                <button class="quick-view-btn" data-product-id="feel-the-rush" data-product-name="Feel the Rush, Wear the Speed" data-product-price="520" data-product-image="index_images/t-shirt/3.png">Quick View</button>
+            </div>
+
+            <div class="featured-product-card quick-view-card"
+                 data-product-id="built-for-grit"
+                 data-product-name="Built for Grit. Made to Inspire."
+                 data-product-price="600"
+                 data-product-image="index_images/t-shirt/4.png"
+                 data-short-description="Channel vintage sports energy with the “Urban Legend 07” tee. Featuring bold varsity-style typography and a motivational “Never Back Down” motto, this shirt stands for strength, resilience, and timeless style.">
+                 <div class="product-label">Sale</div>
+                 <img src="index_images/t-shirt/4.png" alt="T-shirt with Built for Grit Made to Inspire graphic" loading="lazy">
+                 <h3>Built for Grit. Made to Inspire.</h3> <div class="price-container">
+                     <span class="current-price">₹600</span>
+                     <span class="original-price-animated">₹1500</span>
+                 </div>
+                 <p class="discount">60% off</p>
+                 <button class="add-to-cart-btn" data-product-id="built-for-grit" data-product-name="Built for Grit. Made to Inspire." data-product-price="600" data-product-image="index_images/t-shirt/4.png">Add to Cart</button>
+                 <button class="quick-view-btn" data-product-id="built-for-grit" data-product-name="Built for Grit. Made to Inspire." data-product-price="600" data-product-image="index_images/t-shirt/4.png">Quick View</button>
+            </div>
+
+             <div class="featured-product-card quick-view-card"
+                 data-product-id="awaken-rise"
+                 data-product-name="Awaken Your Power. Rise Above Fear."
+                 data-product-price="640"
+                 data-product-image="index_images/t-shirt/5.png"
+                 data-short-description="This bold black graphic tee features a majestic winged statue in a cyber-grid backdrop – symbolizing power, transformation, and inner strength. With phrases like “Embrace change. Find your strength,” it's not just fashion – it’s a mindset.">
+                <div class="product-label bestseller">Bestseller</div>
+                <img src="index_images/t-shirt/5.png" alt="T-shirt with Built for Grit Made to Inspire graphic" loading="lazy">
+                <h3>Awaken Your Power. Rise Above Fear.</h3> <div class="price-container">
+                     <span class="current-price">₹640</span>
+                     <span class="original-price-animated">₹1600</span>
+                 </div>
+                 <p class="discount">60% off</p>
+                 <button class="add-to-cart-btn" data-product-id="awaken-rise" data-product-name="Awaken Your Power. Rise Above Fear." data-product-price="640" data-product-image="index_images/t-shirt/5.png">Add to Cart</button>
+                 <button class="quick-view-btn" data-product-id="awaken-rise" data-product-name="Awaken Your Power. Rise Above Fear." data-product-price="640" data-product-image="index_images/t-shirt/5.png">Quick View</button>
+            </div>
+
+             <div class="featured-product-card extra-offer quick-view-card"
+                 data-product-id="make-every"
+                 data-product-name="Make Every Second Count"
+                 data-product-price="650"
+                 data-product-image="index_images/t-shirt/6.png"
+                 data-short-description="This graphic tee is more than a look—it’s a statement. With a striking green-and-white handwritten font on rich burgundy, the “Our Time Has Value” design reminds you and everyone around that your energy and presence are worth everything.">
+                 <div class="product-label">EXTRA ₹100 OFF</div>
+                 <img src="index_images/t-shirt/6.png" alt="Premium T-Shirt F" loading="lazy">
+                 <h3>Make Every Second Count</h3> <div class="price-container">
+                     <span class="current-price">₹650</span>
+                     <span class="original-price-animated">₹1500</span>
+                 </div>
+                 <p class="discount">50% off</p>
+                 <button class="add-to-cart-btn" data-product-id="make-every" data-product-name="Make Every Second Count" data-product-price="650" data-product-image="index_images/t-shirt/6.png">Add to Cart</button>
+                 <button class="quick-view-btn" data-product-id="make-every" data-product-name="Make Every Second Count" data-product-price="650" data-product-image="index_images/t-shirt/6.png">Quick View</button>
+            </div>
+        </div>
+        <a href="collection.html" class="view-all-button">View All</a>
+    </section>
+
+    <section class="category-section new-arrivals-section">
+        <h2>New <span class="underline-red">Arrivals</span></h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <a href="product-details-ride-the-north.html" data-short-description="Ride the north in style with this signature luxe soft cotton tee.">
+                    <img src="image/t-shirt/1(1).png" alt="Ride The North Signature LuxeSoft Cotton T-Shirt">
+                    <h3>Ride The North Signature LuxeSoft Cotton T-Shirt</h3>
+                    <p class="price">₹799.00</p>
+                    <p class="original-price-text">₹999.00</p>
+                </a>
+                 <button class="add-to-cart-btn" data-product-id="ride-the-north" data-product-name="Ride The North Signature LuxeSoft Cotton T-Shirt" data-product-price="799" data-product-image="image/t-shirt/1(1).png">Add to Cart</button>
+                 <button class="quick-view-btn" data-product-id="ride-the-north" data-product-name="Ride The North Signature LuxeSoft Cotton T-Shirt" data-product-price="799" data-product-image="image/t-shirt/1(1).png">Quick View</button>
+            </div>
+
+            <div class="category-card">
+                <a href="product-details-deployed-beast.html" data-short-description="Unleash the beast within with this signature luxe soft cotton tee.">
+                    <img src="image/t-shirt/2.png" alt="Deployed Beast Signature LuxeSoft Cotton T-Shirt">
+                    <h3>Deployed Beast Signature LuxeSoft Cotton T-Shirt</h3>
+                    <p class="price">₹799.00</p>
+                    <p class="original-price-text">₹999.00</p>
+                </a>
+                 <button class="add-to-cart-btn" data-product-id="deployed-beast" data-product-name="Deployed Beast Signature LuxeSoft Cotton T-Shirt" data-product-price="799" data-product-image="image/t-shirt/2.png">Add to Cart</button>
+                 <button class="quick-view-btn" data-product-id="deployed-beast" data-product-name="Deployed Beast Signature LuxeSoft Cotton T-Shirt" data-product-price="799" data-product-image="image/t-shirt/2.png">Quick View</button>
+            </div>
+
+            <div class="category-card">
+                <a href="product-details-here-to-fly.html" data-short-description="Ready to fly? This deployed signature luxe soft cotton tee is for you.">
+                    <img src="image/t-shirt/3.png" alt="Here To Fly Deployed Signature LuxeSoft Cotton T-Shirt">
+                    <h3>Here To Fly Deployed Signature LuxeSoft Cotton T-Shirt</h3>
+                    <p class="price">₹799.00</p>
+                    <p class="original-price-text">₹999.00</p>
+                </a>
+                 <button class="add-to-cart-btn" data-product-id="here-to-fly" data-product-name="Here To Fly Deployed Signature LuxeSoft Cotton T-Shirt" data-product-price="799" data-product-image="image/t-shirt/3.png">Add to Cart</button>
+                 <button class="quick-view-btn" data-product-id="here-to-fly" data-product-name="Here To Fly Deployed Signature LuxeSoft Cotton T-Shirt" data-product-price="799" data-product-image="image/t-shirt/3.png">Quick View</button>
+            </div>
+
+            <div class="category-card">
+                <a href="product-details-golden-biffles.html" data-short-description="Get your golden biffles with this signature luxe soft cotton tee.">
+                    <img src="image/t-shirt/4.png" alt="Golden Biffles Signature LuxeSoft Cotton T-Shirt">
+                    <h3>Golden Biffles Signature LuxeSoft Cotton T-Shirt</h3>
+                    <p class="price">₹799.00</p>
+                    <p class="original-price-text">₹999.00</p>
+                </a>
+                 <button class="add-to-cart-btn" data-product-id="golden-biffles" data-product-name="Golden Biffles Signature LuxeSoft Cotton T-Shirt" data-product-price="799" data-product-image="image/t-shirt/4.png">Add to Cart</button>
+                 <button class="quick-view-btn" data-product-id="golden-biffles" data-product-name="Golden Biffles Signature LuxeSoft Cotton T-Shirt" data-product-price="799" data-product-image="image/t-shirt/4.png">Quick View</button>
+            </div>
+
+            <div class="category-card">
+                <a href="product-details-army-2.0.html" data-short-description="The Army 2.0 signature luxe soft cotton tee is ready for action.">
+                    <img src="image/t-shirt/5.png" alt="Army 2.0 Signature LuxeSoft Cotton T-Shirt">
+                    <h3>Army 2.0 Signature LuxeSoft Cotton T-Shirt</h3>
+                    <p class="price">₹799.00</p>
+                    <p class="original-price-text">₹999.00</p>
+                </a>
+                 <button class="add-to-cart-btn" data-product-id="army-2-0" data-product-name="Army 2.0 Signature LuxeSoft Cotton T-Shirt" data-product-price="799" data-product-image="image/t-shirt/5.png">Add to Cart</button>
+                 <button class="quick-view-btn" data-product-id="army-2-0" data-product-name="Army 2.0 Signature LuxeSoft Cotton T-Shirt" data-product-price="799" data-product-image="image/5.png">Quick View</button>
+            </div>
+           </div>
+    </section>
+
+    <main class="main-section">
+        <h2>More Products</h2>
+        <div class="product-grid">
+             <div class="product-card">
+                <a href="product-details-cool-graphic.html" data-short-description="A cool graphic tee to elevate your casual look.">
+                    <img src="image/t-shirt/6.png" alt="Cool Graphic Tee" loading="lazy">
+                    <h3>Cool Graphic Tee</h3>
+                    <p class="price">₹999</p>
+                </a>
+                <button class="add-to-cart-btn" data-product-id="cool-graphic" data-product-name="Cool Graphic Tee" data-product-price="999" data-product-image="image/t-shirt/6.png">Add to Cart</button>
+                <button class="quick-view-btn" data-product-id="cool-graphic" data-product-name="Cool Graphic Tee" data-product-price="999" data-product-image="image/t-shirt/6.png">Quick View</button>
+            </div>
+
+             <div class="product-card">
+                 <a href="product-details-striped-comfort.html" data-short-description="Enjoy everyday comfort with this classic striped tee.">
+                    <img src="image/t-shirt/7.png" alt="Striped Comfort Tee" loading="lazy">
+                    <h3>Striped Comfort Tee</h3>
+                    <p class="price">₹899</p>
+                </a>
+                <button class="add-to-cart-btn" data-product-id="striped-comfort" data-product-name="Striped Comfort Tee" data-product-price="899" data-product-image="image/t-shirt/7.png">Add to Cart</button>
+                <button class="quick-view-btn" data-product-id="striped-comfort" data-product-name="Striped Comfort Tee" data-product-price="899" data-product-image="image/t-shirt/7.png">Quick View</button>
+            </div>
+
+             <div class="product-card">
+                 <a href="product-details-limited-edition.html" data-short-description="Get your hands on this limited edition print before it's gone!">
+                    <img src="image/t-shirt/8.png" alt="Limited Edition Print" loading="lazy">
+                    <h3>Limited Edition Print</h3>
+                    <p class="price">₹1,199</p>
+                </a>
+                <button class="add-to-cart-btn" data-product-id="limited-edition" data-product-name="Limited Edition Print" data-product-price="1199" data-product-image="image/t-shirt/8.png">Add to Cart</button>
+                <button class="quick-view-btn" data-product-id="limited-edition" data-product-name="Limited Edition Print" data-product-price="1199" data-product-image="image/t-shirt/8.png">Quick View</button>
+            </div>
+
+             <div class="product-card">
+                 <a href="product-details-basic-solid.html" data-short-description="A versatile basic solid color tee for your everyday wardrobe.">
+                    <img src="image/t-shirt/9.png" alt="Basic Solid Color Tee" loading="lazy">
+                    <h3>Basic Solid Color Tee</h3>
+                    <p class="price">₹799</p>
+                </a>
+                <button class="add-to-cart-btn" data-product-id="basic-solid" data-product-name="Basic Solid Color Tee" data-product-price="799" data-product-image="image/t-shirt/9.png">Add to Cart</button>
+                <button class="quick-view-btn" data-product-id="basic-solid" data-product-name="Basic Solid Color Tee" data-product-price="799" data-product-image="image/t-shirt/9.png">Quick View</button>
+            </div>
+        </div>
+    </main>
+
+
+    <div id="quickViewModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="quickViewContainer">
+                </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-col subscribe-section">
+            <h3>trendbaaz</h3> <p>Stay updated with our latest designs and offers!</p>
+            <div class="subscribe-form">
+                <input type="email" placeholder="Enter your email address" id="subscribeEmail">
+                <button id="subscribeBtn">➔</button>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h3>Shop</h3>
+            <ul>
+                <li><a href="new-arrivals.html">New Arrivals</a></li>
+                <li><a href="mens.html">Men's</a></li>
+                <li><a href="womens.html">Women's</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Help</h3>
+            <ul>
+                <li><a href="track-order.html">Track Order</a></li>
+                <li><a href="size-guide.html">Size Guide</a></li>
+                <li><a href="returns-exchanges.html">Returns & Exchanges</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="our-story.html">Our Story</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="index.js"></script> </body>
+</html>

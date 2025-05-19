@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trendbaaz - Account</title>
+    <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header class="sticky-header">
+        <div class="logo">
+            <a href="index.html">trendBaaZ</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collection.html">Collection</a></li>
+                <li class="dropdown">
+                    <a href="categories.html">Categories <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="category-graphic-tees.html">Graphic Tees</a></li>
+                        <li><a href="category-plain-tees.html">Plain Tees</a></li>
+                        <li><a href="category-long-sleeves.html">Long Sleeves</a></li>
+                        <li><a href="category-hoodies.html">Hoodies</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Search products...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <a href="account.html" title="Account" class="account-link" id="user-account-link">
+                <i class="fas fa-user"></i>
+            </a>
+             <div class="user-info-dropdown" id="user-info-dropdown" style="display: none; position: absolute; background-color: #f9f9f9; border: 1px solid #ccc; padding: 10px; z-index: 1000; right: 0;">
+                 <p><span id="user-full-name"></span></p>
+                 <p><span id="user-email"></span></p>
+                 <button id="logout-button">Logout</button>
+             </div>
+             <a href="cart.html" title="Cart" class="cart-link">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="account-main">
+        <div class="account-page">
+
+            <div class="login-section" id="loginSection">
+                <div class="login-text-banner">
+                    <h2 class="login-repeated">
+                        LOGIN
+                        </h2>
+                </div>
+                <div class="login-form-wrapper">
+                    <div class="login-info">
+                        <p>Login to your account to access your order history and other personalized features.</p>
+                    </div>
+                    <form class="login-form" id="loginForm">
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required>
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="login-button">LOGIN</button>
+                        <div class="create-account-link">
+                            <span>Don't have an account?</span>
+                            <a href="account-create.html">CREATE ACCOUNT</a> </div>
+                    </form>
+                    <div class="social-login">
+                        <button class="social-button facebook-login">
+                            <i class="fab fa-facebook-f"></i> Sign in with Facebook
+                        </button>
+                        <button class="social-button google-login">
+                            <i class="fab fa-google"></i> Sign in with Google
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-info-section login-section" id="userInfoSection" style="display: none;">
+                 <div class="user-info-banner login-text-banner">
+                      <h2 class="user-info-repeated login-repeated">
+                          MY ACCOUNT
+                      </h2>
+                 </div>
+                 <div class="user-details-wrapper login-form-wrapper">
+                     <h2>Account Details</h2>
+                     <div class="user-details-info">
+                         <p><strong>Name:</strong> <span id="displayFullName"></span></p>
+                         <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+                     </div>
+                     <div class="logout-container">
+                         <button id="logoutButton" class="login-button">Logout</button>
+                     </div>
+                 </div>
+            </div>
+
+            <div class="currency-selector">
+                <button><span><img src="index_images/flag.png" alt="INR Flag" style="width: 20px; vertical-align: middle; margin-right: 5px;"></span> INR <i class="fas fa-chevron-down"></i></button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-col subscribe-section">
+            <h3>trendbaaz</h3> <p>Stay updated with our latest designs and offers!</p>
+            <div class="subscribe-form">
+                <input type="email" placeholder="Enter your email address" id="subscribeEmail">
+                <button id="subscribeBtn">➔</button>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h3>Shop</h3>
+            <ul>
+                <li><a href="new-arrivals.html">New Arrivals</a></li>
+                <li><a href="mens.html">Men's</a></li>
+                <li><a href="womens.html">Women's</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Help</h3>
+            <ul>
+                <li><a href="track-order.html">Track Order</a></li>
+                <li><a href="size-guide.html">Size Guide</a></li>
+                <li><a href="returns-exchanges.html">Returns & Exchanges</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="our-story.html">Our Story</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="account.js"></script>
+</body>
+</html>

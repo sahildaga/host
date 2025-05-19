@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trendbaaz - Product Details</title>
+    <link rel="stylesheet" href="product-details.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header class="sticky-header">
+        <div class="logo">
+            <a href="index.html">trendBaaZ</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collection.html">Collection</a></li>
+                <li class="dropdown">
+                    <a href="categories.html">Categories <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="category-graphic-tees.html">Graphic Tees</a></li>
+                        <li><a href="category-plain-tees.html">Plain Tees</a></li>
+                        <li><a href="category-long-sleeves.html">Long Sleeves</a></li>
+                        <li><a href="category-hoodies.html">Hoodies</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Search products...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <a href="account.html" title="Account" class="account-link">
+                <i class="fas fa-user"></i>
+            </a>
+            <a href="cart.html" title="Cart" class="cart-link">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="product-details-main">
+        <div id="productDetailsContainer">
+            <p>Loading product details...</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-col subscribe-section">
+            <h3>trendbaaz</h3> <p>Stay updated with our latest designs and offers!</p>
+            <div class="subscribe-form">
+                <input type="email" placeholder="Enter your email address" id="subscribeEmail">
+                <button id="subscribeBtn">➔</button>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h3>Shop</h3>
+            <ul>
+                <li><a href="new-arrivals.html">New Arrivals</a></li>
+                <li><a href="mens.html">Men's</a></li>
+                <li><a href="womens.html">Women's</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Help</h3>
+            <ul>
+                <li><a href="track-order.html">Track Order</a></li>
+                <li><a href="size-guide.html">Size Guide</a></li>
+                <li><a href="returns-exchanges.html">Returns & Exchanges</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="our-story.html">Our Story</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="product-data.js"></script> <script src="product-details.js"></script> </body>
+</html>

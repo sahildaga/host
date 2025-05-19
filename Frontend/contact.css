@@ -1,0 +1,822 @@
+/* Global Reset (Copied from existing CSS) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header Styles (Copied from existing CSS) */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Navigation (Copied from existing CSS) */
+nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e60023;
+}
+
+/* Dropdown Menu (Copied from existing CSS) */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 0;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li a {
+    padding: 10px 15px;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content li a:hover {
+    background-color: #ddd;
+    color: #e60023;
+}
+
+/* Header Actions (Copied from existing CSS) */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Account and Cart Icons (Copied from existing CSS) */
+.account-link,
+.cart-link {
+    font-size: 20px;
+    color: black;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.account-link:hover,
+.cart-link:hover {
+    color: #e60023;
+}
+
+/* Cart Count (Copied from existing CSS) */
+.cart-link .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #e60023;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 3px 6px;
+    min-width: 18px;
+    text-align: center;
+    display: none; /* Hidden by default, shown by JS if cart has items */
+}
+
+/* Search Box (Copied from existing CSS) */
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+.search-box input[type="text"] {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-box button {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    outline: none;
+}
+
+.search-box button:hover {
+    background-color: #333;
+}
+
+/* Footer (Copied from existing CSS) */
+footer.footer {
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 180px;
+}
+
+.footer-col h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+}
+
+.subscribe-section p {
+    margin-bottom: 10px;
+}
+
+.subscribe-form {
+    display: flex;
+}
+
+.subscribe-section input[type="email"] {
+    padding: 8px;
+    width: 70%;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    color: #333;
+    outline: none;
+}
+
+.subscribe-section button {
+    padding: 8px 12px;
+    background-color: #e60023;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+}
+
+.subscribe-section button:hover {
+    background-color: #c1001a;
+}
+
+
+/* --- Contact Page Themed Styles --- */
+.contact-main {
+    padding: 100px 0 0 0; /* Adjust padding-top for sticky header, no horizontal padding here */
+    min-height: calc(100vh - 200px); /* Ensure main content takes up space above footer */
+    background-color: #fff; /* White background */
+    display: flex;
+    justify-content: center; /* Center the content wrapper */
+}
+
+.contact-content-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    max-width: 1200px; /* Max width for the content */
+    width: 100%;
+    padding: 0 20px; /* Add horizontal padding to the wrapper */
+    gap: 40px; /* Space between blocks */
+}
+
+.contact-info-block {
+    flex: 1 1 400px; /* Allow flex grow and shrink, with a base width */
+    padding: 20px 0; /* Vertical padding, no horizontal padding here */
+}
+
+.contact-info-block h1 {
+    font-size: 40px; /* Larger heading */
+    margin-bottom: 20px;
+    color: #111;
+    font-weight: normal; /* Match image style */
+}
+
+.contact-info-block p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.contact-details {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-details p {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.contact-details strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.business-inquiries {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.business-inquiries h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #111;
+    font-weight: normal; /* Match image style */
+}
+
+.business-inquiries p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.business-inquiries a {
+    color: #e60023; /* Highlight link color */
+    text-decoration: underline;
+}
+
+.social-follow {
+    margin-top: 30px;
+}
+
+.social-follow h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #111;
+    font-weight: normal; /* Match image style */
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px; /* Space between icons */
+    margin-top: 15px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #000; /* Darker on hover */
+}
+
+
+.contact-form-block {
+    flex: 1 1 500px; /* Allow flex grow and shrink, with a larger base width for the form */
+    padding: 20px 0; /* Vertical padding */
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-block h2 {
+     /* This h2 is empty in HTML, using it for potential spacing/alignment */
+     margin-bottom: 40px; /* Space above the form */
+}
+
+/* Form Styles */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between form groups */
+}
+
+.form-row {
+    display: flex;
+    gap: 20px; /* Space between name and email fields */
+}
+
+.form-row .form-group {
+    flex: 1; /* Make name and email groups take equal width */
+    margin-bottom: 0; /* Remove bottom margin from groups in a row */
+}
+
+.form-group {
+    margin-bottom: 0; /* Default margin for single groups */
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: #000; /* Darker border on focus */
+}
+
+.submit-btn {
+    display: inline-block;
+    width: auto; /* Auto width based on content/padding */
+    align-self: flex-start; /* Align button to the left */
+    padding: 12px 30px; /* Padding for the button */
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    margin-top: 10px; /* Space above the button */
+}
+
+.submit-btn:hover {
+    background-color: #444;
+}
+
+
+/* --- Animated Bottom Strip Styles --- */
+.animated-contact-strip {
+    width: 100%;
+    padding: 20px 0; /* Vertical padding */
+    background-color: #f0f0f0; /* Light grey background from image */
+    overflow: hidden; /* Hide the text outside this container */
+    position: relative; /* Needed for animation */
+    margin-top: 40px; /* Space above the strip */
+    border-top: 1px solid #e0e0e0; /* Optional border */
+    border-bottom: 1px solid #e0f0f0; /* Optional border */
+}
+
+.animated-text-container {
+    display: flex; /* Use flexbox for better control over spacing and width */
+    width: max-content; /* Allow the container's width to be determined by its content */
+    animation: slideText linear infinite; /* Apply the animation */
+    /* Start position will be set by keyframes */
+}
+
+/* Define the animation keyframes for Left-to-Right movement */
+@keyframes slideText {
+    0% {
+        /* Start off-screen to the left.
+           We animate from -100% to 0% relative to the container's width.
+           With display: flex and width: max-content, the container's width
+           is the total width of all spans + their margins.
+           Animating by -100% of this total width moves the entire block.
+           To make it seamless, the content must be duplicated such that
+           the end of the last visible item aligns perfectly with the start
+           of the first item when the animation loops.
+           Animating from -100% to 0% should achieve this if the content
+           is sufficiently duplicated.
+        */
+        transform: translateX(-100%);
+    }
+    100% {
+        /* End at the original position */
+        transform: translateX(0%);
+    }
+}
+
+/* Style the text inside the container */
+.animated-text-container span {
+    flex-shrink: 0; /* Prevent spans from shrinking */
+    font-size: 32px; /* Adjust font size as needed */
+    font-weight: bold;
+    color: #222; /* Dark text color */
+    text-transform: uppercase; /* Match image style */
+    /* Add space to the right of each span */
+    margin-right: 30px; /* Adjust the value for desired spacing */
+    /* Remove any default or inherited horizontal padding */
+    padding: 0;
+}
+
+/* Adjust animation duration and timing */
+.animated-text-container {
+    animation-duration: 30s; /* Adjust time for speed (shorter = faster) */
+    animation-timing-function: linear; /* Constant speed */
+    animation-iteration-count: infinite; /* Loop forever */
+}
+
+/* --- End Animated Bottom Strip Styles --- */
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+     nav ul {
+         gap: 15px;
+     }
+      .header-actions {
+          gap: 10px;
+      }
+       .search-box input[type="text"] {
+            width: 120px;
+       }
+       .contact-main {
+           padding-top: 80px; /* Adjust padding for sticky header */
+       }
+       .contact-content-wrapper {
+           flex-direction: column; /* Stack blocks vertically */
+           gap: 30px;
+           padding: 0 15px; /* Adjust horizontal padding */
+       }
+       .contact-info-block,
+       .contact-form-block {
+           flex: 1 1 100%; /* Take full width */
+           padding: 15px 0; /* Adjust vertical padding */
+       }
+        .contact-info-block h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+         .contact-info-block p {
+             font-size: 15px;
+             margin-bottom: 10px;
+         }
+         .contact-details,
+         .business-inquiries,
+         .social-follow {
+             margin-top: 20px;
+             margin-bottom: 20px;
+         }
+         .business-inquiries h2,
+         .social-follow h2 {
+             font-size: 20px;
+             margin-bottom: 10px;
+         }
+          .business-inquiries p {
+              font-size: 14px;
+          }
+          .social-icons {
+              gap: 15px;
+              margin-top: 10px;
+          }
+           .social-icons a {
+               font-size: 20px;
+           }
+
+        .contact-form-block h2 {
+            margin-bottom: 30px; /* Adjust spacing */
+        }
+         #contactForm {
+             gap: 15px; /* Adjust space between form groups */
+         }
+         .form-row {
+             gap: 15px; /* Adjust space between name/email */
+         }
+          .form-group label {
+              font-size: 13px;
+              margin-bottom: 5px;
+          }
+           .form-group input[type="text"],
+           .form-group input[type="email"],
+           .form-group textarea {
+               padding: 10px; /* Adjust padding */
+               font-size: 15px;
+           }
+           .submit-btn {
+               padding: 10px 25px;
+               font-size: 15px;
+               margin-top: 8px;
+           }
+
+            /* Adjust animated strip font size and speed */
+            .animated-text-container span {
+                font-size: 24px; /* Example adjustment */
+                margin-right: 20px; /* Adjust spacing */
+            }
+             .animated-text-container {
+                 animation-duration: 15s; /* Example adjustment */
+             }
+}
+
+@media (max-width: 768px) {
+    .sticky-header {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .header-actions {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: flex-end;
+        gap: 15px;
+    }
+
+    .search-box {
+        margin-left: 0;
+        width: 60%;
+    }
+
+    .account-link,
+    .cart-link {
+        font-size: 22px;
+    }
+
+    .contact-main {
+        padding-top: 120px;
+    }
+
+    .contact-content-wrapper {
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .contact-info-block,
+    .contact-form-block {
+        padding: 10px 0;
+    }
+
+    .contact-info-block h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+     .contact-info-block p {
+         font-size: 14px;
+         margin-bottom: 10px;
+     }
+
+    .contact-details,
+    .business-inquiries,
+    .social-follow {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .business-inquiries h2,
+    .social-follow h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+     .business-inquiries p {
+         font-size: 13px;
+     }
+     .social-icons {
+         gap: 10px;
+         margin-top: 8px;
+     }
+      .social-icons a {
+          font-size: 18px;
+      }
+
+
+    .contact-form-block h2 {
+        margin-bottom: 20px;
+    }
+     #contactForm {
+         gap: 10px;
+     }
+     .form-row {
+         flex-direction: column; /* Stack name and email fields */
+         gap: 10px;
+     }
+      .form-row .form-group {
+          flex: none; /* Remove flex grow */
+          width: 100%; /* Take full width */
+      }
+     .form-group label {
+         font-size: 13px;
+         margin-bottom: 4px;
+     }
+      .form-group input[type="text"],
+      .form-group input[type="email"],
+      .form-group textarea {
+          padding: 8px;
+          font-size: 14px;
+      }
+      .submit-btn {
+          padding: 10px 20px;
+          font-size: 15px;
+          margin-top: 5px;
+      }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .footer-col {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subscribe-section input[type="email"],
+    .subscribe-section button {
+         width: 100%;
+         max-width: none;
+    }
+
+    /* Adjust animated strip font size and speed */
+    .animated-text-container span {
+        font-size: 20px; /* Example adjustment */
+        margin-right: 15px; /* Adjust spacing */
+    }
+     .animated-text-container {
+         animation-duration: 12s; /* Example adjustment */
+     }
+}
+
+@media (max-width: 480px) {
+    .sticky-header {
+        padding: 10px;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+     nav ul {
+         margin-bottom: 10px;
+     }
+
+    .header-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .search-box {
+        width: 95%;
+    }
+
+     .account-link,
+     .cart-link {
+         font-size: 20px;
+     }
+
+    .contact-main {
+         padding-top: 140px;
+     }
+
+     .contact-content-wrapper {
+         gap: 15px;
+         padding: 0 8px;
+     }
+
+     .contact-info-block h1 {
+         font-size: 24px;
+         margin-bottom: 10px;
+     }
+      .contact-info-block p {
+          font-size: 13px;
+          margin-bottom: 8px;
+      }
+     .contact-details,
+     .business-inquiries,
+     .social-follow {
+         margin-top: 10px;
+         margin-bottom: 10px;
+     }
+     .business-inquiries h2,
+     .social-follow h2 {
+         font-size: 16px;
+         margin-bottom: 8px;
+     }
+      .business-inquiries p {
+          font-size: 12px;
+      }
+      .social-icons {
+          gap: 8px;
+          margin-top: 5px;
+      }
+       .social-icons a {
+           font-size: 16px;
+       }
+
+     .contact-form-block h2 {
+         margin-bottom: 15px;
+     }
+      #contactForm {
+         gap: 8px;
+      }
+      .form-row {
+          gap: 8px;
+      }
+      .form-group label {
+          font-size: 12px;
+          margin-bottom: 3px;
+      }
+       .form-group input[type="text"],
+       .form-group input[type="email"],
+       .form-group textarea {
+           padding: 5px;
+           font-size: 12px;
+       }
+       .submit-btn {
+           padding: 8px 15px;
+           font-size: 14px;
+           margin-top: 5px;
+       }
+
+    /* Adjust animated strip font size and speed */
+    .animated-text-container span {
+        font-size: 16px; /* Example adjustment */
+        margin-right: 10px; /* Adjust spacing */
+    }
+     .animated-text-container {
+         animation-duration: 10s; /* Example adjustment */
+     }
+}

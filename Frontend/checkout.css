@@ -1,0 +1,841 @@
+/* Global Reset (Copy from your existing global styles if you have one, or other pages like account.css) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header Styles (Copy from your existing header styles) */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Navigation (Copy from your existing navigation styles) */
+nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e60023;
+}
+
+/* Dropdown Menu (Copy from your existing dropdown styles) */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 0;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li a {
+    padding: 10px 15px;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content li a:hover {
+    background-color: #ddd;
+    color: #e60023;
+}
+
+/* Header Actions (Copy from your existing header actions styles) */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Account and Cart Icons (Copy from your existing icon styles) */
+.account-link,
+.cart-link {
+    font-size: 20px;
+    color: black;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.account-link:hover,
+.cart-link:hover {
+    color: #e60023;
+}
+
+/* Cart Count (Copy from your existing cart count styles) */
+.cart-link .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #e60023;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 3px 6px;
+    min-width: 18px;
+    text-align: center;
+    display: none; /* Hidden by default, shown by JS if cart has items */
+}
+
+/* Search Box (Copy from your existing search box styles) */
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+.search-box input[type="text"] {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-box button {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    outline: none;
+}
+
+.search-box button:hover {
+    background-color: #333;
+}
+
+/* Footer (Copy from your existing footer styles) */
+footer.footer {
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 180px;
+}
+
+.footer-col h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+}
+
+.subscribe-section p {
+    margin-bottom: 10px;
+}
+
+.subscribe-form {
+    display: flex;
+}
+
+.subscribe-section input[type="email"] {
+    padding: 8px;
+    width: 70%;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    color: #333;
+    outline: none;
+}
+
+.subscribe-section button {
+    padding: 8px 12px;
+    background-color: #e60023;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+}
+
+.subscribe-section button:hover {
+    background-color: #c1001a;
+}
+
+
+/* --- Checkout Page Specific Styles --- */
+.checkout-main {
+    padding: 100px 20px 40px 20px; /* Adjust padding-top for sticky header */
+    max-width: 800px; /* Max width for the checkout container */
+    margin: 0 auto; /* Center the content */
+    min-height: calc(100vh - 200px); /* Ensure main content takes up space above footer */
+    background-color: #f9f9f9; /* Match body background */
+}
+
+.checkout-container {
+    background-color: #fff; /* White background for the main checkout area */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-top: 20px; /* Space below the main heading */
+}
+
+.checkout-container h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #111;
+}
+
+.checkout-section {
+    margin-bottom: 40px; /* Space between sections */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee; /* Separator line */
+}
+
+.checkout-section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none; /* No border for the last section */
+}
+
+.checkout-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Styles for Cart Items Summary (Initial Review - Step 1) */
+#cartItemsSummary {
+    margin-bottom: 20px;
+}
+
+#cartItemsSummary .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #eee; /* Dashed separator for items */
+}
+
+#cartItemsSummary .cart-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+#cartItemsSummary .item-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 1px solid #eee;
+}
+
+#cartItemsSummary .item-details {
+    flex-grow: 1; /* Allows details to take up available space */
+}
+
+#cartItemsSummary .item-details h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#cartItemsSummary .item-details p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 3px;
+}
+
+#cartItemsSummary .item-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e60023;
+    white-space: nowrap; /* Prevent price from wrapping */
+}
+
+/* Styles for Final Order Summary (Step 4) */
+#finalOrderSummary .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #eee;
+}
+
+#finalOrderSummary .cart-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+#finalOrderSummary .item-image { /* Styles for final summary images */
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 1px solid #eee;
+}
+
+#finalOrderSummary .item-details { /* Styles for final summary item details */
+    flex-grow: 1;
+}
+
+#finalOrderSummary .item-details h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#finalOrderSummary .item-details p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 3px;
+}
+
+#finalOrderSummary .item-price { /* Styles for final summary item price */
+    font-size: 16px;
+    font-weight: bold;
+    color: #e60023;
+    white-space: nowrap;
+}
+
+#finalOrderSummary h3 { /* Style for "Items:" and "Shipping To:" headings if needed */
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+
+/* Styles for Order Summary Box (Subtotal/Total in Review Step) */
+.order-summary,
+.final-order-totals { /* .final-order-totals is for the box in the Final Summary Step */
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.order-summary p,
+.final-order-totals p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.order-summary p:last-child,
+.final-order-totals p:last-child {
+    margin-bottom: 0;
+    font-weight: bold;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.order-summary span,
+.final-order-totals span {
+    font-weight: normal;
+}
+
+.order-summary p:last-child span,
+.final-order-totals p:last-child span {
+    font-weight: bold;
+    color: #e60023; /* Highlight total */
+}
+
+
+/* Form Styles (Reused from account.css or general styles) */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group select:focus {
+    border-color: #e60023;
+}
+
+/* Button Styles */
+.checkout-button {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    margin-top: 10px; /* Added some margin for buttons that appear alone */
+}
+
+.checkout-button:hover {
+    background-color: #444;
+}
+
+.checkout-button.secondary {
+    background-color: #6c757d; /* Grey color for back buttons */
+    margin-right: 10px; /* Space between buttons */
+}
+
+.checkout-button.secondary:hover {
+    background-color: #5a6268;
+}
+
+.checkout-button.primary {
+     background-color: #28a745; /* Green for Place Order */
+}
+
+.checkout-button.primary:hover {
+     background-color: #218838;
+}
+
+
+.form-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+}
+
+.form-actions .checkout-button {
+    width: auto; /* Allow buttons to size based on content */
+    margin-top: 0; /* Reset margin-top for buttons in form-actions */
+}
+
+
+/* Order Confirmation Styles */
+#orderConfirmationSection {
+    text-align: center;
+}
+
+#orderConfirmationSection h2 {
+    color: #28a745; /* Green color */
+}
+
+#orderConfirmationSection p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#orderConfirmationSection strong {
+    color: #000;
+}
+
+#orderConfirmationSection .checkout-button {
+    margin-top: 20px;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+     nav ul {
+         gap: 15px;
+     }
+      .header-actions {
+          gap: 10px;
+      }
+       .search-box input[type="text"] {
+            width: 120px;
+       }
+       .checkout-main {
+           max-width: 95%; /* Allow container to take more width */
+           padding: 80px 15px 30px 15px;
+       }
+       .checkout-container {
+           padding: 20px;
+       }
+       .checkout-container h1 {
+           font-size: 28px;
+           margin-bottom: 20px;
+       }
+       .checkout-section h2 {
+           font-size: 20px;
+           margin-bottom: 15px;
+       }
+       /* Apply to both summary sections */
+       #cartItemsSummary .item-image,
+       #finalOrderSummary .item-image {
+           width: 60px;
+           height: 60px;
+           margin-right: 10px;
+       }
+       #cartItemsSummary .item-details h3,
+       #finalOrderSummary .item-details h3 {
+           font-size: 15px;
+       }
+       #cartItemsSummary .item-details p,
+       #cartItemsSummary .item-price,
+       #finalOrderSummary .item-details p,
+       #finalOrderSummary .item-price {
+           font-size: 14px;
+       }
+       .order-summary p,
+       .final-order-totals p,
+       .form-group label,
+       .form-group input[type="text"],
+       .form-group input[type="email"],
+       .form-group select {
+           font-size: 15px;
+       }
+        .form-group {
+            margin-bottom: 15px;
+        }
+       .checkout-button {
+           padding: 10px 20px;
+           font-size: 15px;
+       }
+        .form-actions {
+            margin-top: 20px;
+        }
+         #orderConfirmationSection p {
+             font-size: 16px;
+         }
+}
+
+@media (max-width: 768px) {
+    .sticky-header {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .header-actions {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: flex-end;
+        gap: 15px;
+    }
+
+    .search-box {
+        margin-left: 0;
+        width: 60%;
+    }
+
+    .account-link,
+    .cart-link {
+        font-size: 22px;
+    }
+
+    .checkout-main {
+        padding: 120px 10px 30px 10px; /* Increased top padding if header is taller due to stacking */
+        /* margin-top: 70px; */ /* Remove or adjust if sticky header height changes significantly */
+    }
+
+    .checkout-container {
+        padding: 15px;
+    }
+
+    .checkout-container h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .checkout-section h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    /* Apply to both summary sections */
+    #cartItemsSummary .cart-item,
+    #finalOrderSummary .cart-item {
+        flex-direction: column; /* Stack item image and details */
+        align-items: flex-start;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+     #cartItemsSummary .item-image,
+     #finalOrderSummary .item-image {
+         margin-right: 0;
+         margin-bottom: 10px;
+     }
+     #cartItemsSummary .item-details,
+     #finalOrderSummary .item-details {
+         width: 100%; /* Take full width when stacked */
+     }
+     #cartItemsSummary .item-price,
+     #finalOrderSummary .item-price {
+         align-self: flex-end; /* Align price to the right */
+         margin-top: 5px;
+     }
+
+    .order-summary p,
+    .final-order-totals p,
+    .form-group label,
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group select {
+        font-size: 14px;
+    }
+     .form-group {
+         margin-bottom: 10px;
+     }
+    .checkout-button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+     .form-actions {
+         margin-top: 15px;
+         flex-direction: column; /* Stack buttons */
+         align-items: flex-end; /* Align stacked buttons to the right */
+         gap: 10px; /* Space between stacked buttons */
+     }
+     .form-actions .checkout-button {
+         width: auto; /* Keep auto width */
+     }
+
+     #orderConfirmationSection p {
+         font-size: 15px;
+     }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .footer-col {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subscribe-section input[type="email"] {
+        width: 90%;
+        max-width: 300px;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .subscribe-section button {
+        width: 90%;
+        max-width: 300px;
+        border-radius: 0 0 5px 5px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sticky-header {
+        padding: 10px;
+        align-items: center; /* Center items if logo is above nav */
+    }
+
+    .logo {
+        font-size: 24px;
+        margin-bottom: 10px; /* If nav is below */
+        text-align: center; /* If logo is centered */
+        width: 100%;
+    }
+
+     nav ul {
+         margin-bottom: 10px;
+         align-items: center; /* Center nav links */
+     }
+
+    .header-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .search-box {
+        width: 95%;
+    }
+
+     .account-link,
+     .cart-link {
+         font-size: 20px;
+     }
+
+    .checkout-main {
+         padding: 160px 5px 20px 5px; /* Further adjust padding if header is taller */
+         /* margin-top: 60px; */
+     }
+
+    .checkout-container {
+        padding: 10px;
+    }
+
+    .checkout-container h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .checkout-section h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    /* Apply to both summary sections */
+    #cartItemsSummary .item-image,
+    #finalOrderSummary .item-image {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 8px;
+    }
+    #cartItemsSummary .item-details h3,
+    #finalOrderSummary .item-details h3 {
+        font-size: 14px;
+    }
+    #cartItemsSummary .item-details p,
+    #cartItemsSummary .item-price,
+    #finalOrderSummary .item-details p,
+    #finalOrderSummary .item-price {
+        font-size: 13px;
+    }
+
+    .order-summary p,
+    .final-order-totals p,
+    .form-group label,
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group select {
+        font-size: 13px;
+    }
+    .form-group {
+        margin-bottom: 8px;
+    }
+    .checkout-button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+     .form-actions {
+         margin-top: 10px;
+         gap: 8px;
+     }
+     .form-actions .checkout-button {
+         width: 100%; /* Make buttons full width in stacked column */
+     }
+
+
+    #orderConfirmationSection p {
+        font-size: 14px;
+    }
+
+
+    .footer-col {
+        margin-bottom: 15px;
+    }
+
+    .subscribe-section input[type="email"],
+    .subscribe-section button {
+         width: 100%;
+         max-width: none;
+    }
+}

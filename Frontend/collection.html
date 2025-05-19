@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trendbaaz - Our Collection</title>
+    <link rel="stylesheet" href="collection.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" xintegrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header class="sticky-header">
+        <div class="logo">
+            <a href="index.html">trendBaaZ</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collection.html">Collection</a></li>
+                <li class="dropdown">
+                    <a href="categories.html">Categories <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="category-graphic-tees.html">Graphic Tees</a></li>
+                        <li><a href="category-plain-tees.html">Plain Tees</a></li>
+                        <li><a href="category-long-sleeves.html">Long Sleeves</a></li>
+                        <li><a href="category-hoodies.html">Hoodies</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Search products...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <a href="account.html" title="Account" class="account-link">
+                <i class="fas fa-user"></i>
+            </a>
+            <a href="cart.html" title="Cart" class="cart-link">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <h2>Our Full Collection</h2>
+
+        <div class="collection-grid">
+
+            <div class="product-card"
+                  data-product-id="cool-graphic">
+                 <img src="index_images/t-shirt/1.png" alt="Cool Graphic Tee" loading="lazy">
+
+                 <div class="product-rating">
+                     <span class="stars">★★★★☆</span>
+                     <span class="rating-text">4.5 | 100 Reviews</span>
+                 </div>
+
+                 <h3>Cool Graphic Tee</h3>
+
+                 <div class="price-container">
+                     <span class="current-price">₹999</span>
+                 </div>
+
+                 <div class="product-features">
+                     <span class="feature-pill">Soft Cotton</span>
+                     <span class="feature-pill">Unique Print</span>
+                 </div>
+
+                 <button class="quick-view-btn" data-product-id="cool-graphic">Quick View</button>
+             </div>
+            <div class="product-card"
+                  data-product-id="placeholder-product-1">
+                 <img src="index_images/t-shirt/2.png" alt="Placeholder Tee 1" loading="lazy">
+                 <div class="product-rating">
+                     <span class="stars">★★★★★</span>
+                     <span class="rating-text">5.0 | 50 Reviews</span>
+                 </div>
+                 <h3>Placeholder Tee 1</h3>
+                 <div class="price-container"><span class="current-price">₹750</span></div>
+                 <div class="product-features">
+                     <span class="feature-pill">Premium Quality</span>
+                     <span class="feature-pill">Eco-friendly</span>
+                 </div>
+                 <button class="quick-view-btn" data-product-id="placeholder-product-1">Quick View</button>
+             </div>
+            <div class="product-card"
+                 data-product-id="placeholder-product-2">
+                <img src="index_images/t-shirt/3.png" alt="Trendy Style Tee" loading="lazy">
+                <div class="product-rating">
+                    <span class="stars">★★★★☆</span>
+                    <span class="rating-text">4.7 | 120 Reviews</span>
+                </div>
+                <h3>Trendy Style Tee</h3>
+                <div class="price-container"><span class="current-price">₹880</span></div>
+                <div class="product-features">
+                    <span class="feature-pill">Modern Design</span>
+                    <span class="feature-pill">Comfort Fit</span>
+                </div>
+                 <button class="quick-view-btn" data-product-id="placeholder-product-2">Quick View</button>
+            </div>
+            <div class="product-card"
+                 data-product-id="placeholder-product-3">
+                <img src="index_images/t-shirt/4.png" alt="Bold Graphic Tee" loading="lazy">
+                <div class="product-rating">
+                    <span class="stars">★★★★☆</span>
+                    <span class="rating-text">4.6 | 90 Reviews</span>
+                </div>
+                <h3>Bold Graphic Tee</h3>
+                <div class="price-container"><span class="current-price">₹1050</span></div>
+                <div class="product-features">
+                    <span class="feature-pill">Vibrant Colors</span>
+                    <span class="feature-pill">Durable Print</span>
+                </div>
+                <button class="quick-view-btn" data-product-id="placeholder-product-3">Quick View</button>
+            </div>
+            <div class="product-card"
+                  data-product-id="placeholder-product-4">
+                 <img src="index_images/t-shirt/5.png" alt="Cool Summer Tee" loading="lazy">
+                 <div class="product-rating">
+                     <span class="stars">★★★★☆</span>
+                     <span class="rating-text">4.8 | 75 Reviews</span>
+                 </div>
+                 <h3>Cool Summer Tee</h3>
+                 <div class="price-container"><span class="current-price">₹850</span></div>
+                 <div class="product-features">
+                     <span class="feature-pill">Lightweight</span>
+                     <span class="feature-pill">Breathable</span>
+                 </div>
+                 <button class="quick-view-btn" data-product-id="placeholder-product-4">Quick View</button>
+             </div>
+            <div class="product-card"
+                  data-product-id="placeholder-product-5">
+                 <img src="index_images/t-shirt/6.png" alt="Casual Plain Tee" loading="lazy">
+                 <div class="product-rating">
+                     <span class="stars">★★★★☆</span>
+                     <span class="rating-text">4.3 | 150 Reviews</span>
+                 </div>
+                 <h3>Casual Plain Tee</h3>
+                 <div class="price-container"><span class="current-price">₹650</span></div>
+                 <div class="product-features">
+                     <span class="feature-pill">Basic Essential</span>
+                     <span class="feature-pill">Multiple Colors</span>
+                 </div>
+                 <button class="quick-view-btn" data-product-id="placeholder-product-5">Quick View</button>
+             </div>
+            <div class="product-card"
+                 data-product-id="placeholder-product-6">
+                <img src="image/t-shirt/placeholder-6.png" alt="Vintage Feel Tee" loading="lazy">
+                <div class="product-rating">
+                    <span class="stars">★★★★☆</span>
+                    <span class="rating-text">4.9 | 60 Reviews</span>
+                </div>
+                <h3>Vintage Feel Tee</h3>
+                <div class="price-container"><span class="current-price">₹950</span></div>
+                <div class="product-features">
+                    <span class="feature-pill">Retro Style</span>
+                    <span class="feature-pill">Soft Wash</span>
+                </div>
+                <button class="quick-view-btn" data-product-id="placeholder-product-6">Quick View</button>
+            </div>
+            <div class="product-card"
+                 data-product-id="placeholder-product-7">
+                <img src="image/t-shirt/placeholder-7.png" alt="Minimalist Design Tee" loading="lazy">
+                <div class="product-rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-text">5.0 | 88 Reviews</span>
+                </div>
+                <h3>Minimalist Design Tee</h3>
+                <div class="price-container"><span class="current-price">₹800</span></div>
+                <div class="product-features">
+                    <span class="feature-pill">Clean Look</span>
+                    <span class="feature-pill">Comfort Fit</span>
+                </div>
+                <button class="quick-view-btn" data-product-id="placeholder-product-7">Quick View</button>
+            </div>
+            <div class="product-card"
+                  data-product-id="placeholder-product-8">
+                 <img src="image/t-shirt/placeholder-8.png" alt="Sports Graphic Tee" loading="lazy">
+                 <div class="product-rating">
+                     <span class="stars">★★★★☆</span>
+                     <span class="rating-text">4.4 | 110 Reviews</span>
+                 </div>
+                 <h3>Sports Graphic Tee</h3>
+                 <div class="price-container"><span class="current-price">₹1100</span></div>
+                 <div class="product-features">
+                     <span class="feature-pill">Athletic Style</span>
+                     <span class="feature-pill">Breathable</span>
+                 </div>
+                 <button class="quick-view-btn" data-product-id="placeholder-product-8">Quick View</button>
+             </div>
+            <div class="product-card"
+                  data-product-id="placeholder-product-9">
+                 <img src="image/t-shirt/placeholder-9.png" alt="Abstract Art Tee" loading="lazy">
+                 <div class="product-rating">
+                     <span class="stars">★★★★☆</span>
+                     <span class="rating-text">4.7 | 95 Reviews</span>
+                 </div>
+                 <h3>Abstract Art Tee</h3>
+                 <div class="price-container"><span class="current-price">₹1200</span></div>
+                 <div class="product-features">
+                     <span class="feature-pill">Artistic Print</span>
+                     <span class="feature-pill">Unique Design</span>
+                 </div>
+                 <button class="quick-view-btn" data-product-id="placeholder-product-9">Quick View</button>
+             </div>
+            </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-col subscribe-section">
+            <h3>trendbaaz</h3> <p>Stay updated with our latest designs and offers!</p>
+            <div class="subscribe-form">
+                <input type="email" placeholder="Enter your email address" id="subscribeEmail">
+                <button id="subscribeBtn">➔</button>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h3>Shop</h3>
+            <ul>
+                <li><a href="new-arrivals.html">New Arrivals</a></li>
+                <li><a href="mens.html">Men's</a></li>
+                <li><a href="womens.html">Women's</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Help</h3>
+            <ul>
+                <li><a href="track-order.html">Track Order</a></li>
+                <li><a href="size-guide.html">Size Guide</a></li>
+                <li><a href="returns-exchanges.html">Returns & Exchanges</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="our-story.html">Our Story</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="collection.js"></script>
+</body>
+</html>
