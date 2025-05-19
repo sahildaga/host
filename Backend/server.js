@@ -1,4 +1,6 @@
 // Load environment variables from .env file
+// In production on Railway, environment variables are automatically injected,
+// so dotenv might not be strictly necessary but is harmless.
 require('dotenv').config();
 
 const express = require('express');
@@ -19,12 +21,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const allowedOrigins = [
     'http://127.0.0.1:5500', // Example: Live Server
     'http://localhost:5173', // Example: Vite/React
-    'null',
-    // 'http://your-production-domain.com', // Replace with your actual domain
+    'null', // 'null' origin can occur for local files or sandboxed environments - be cautious with this in production
+    // 'http://your-production-domain.com', // Replace with your actual frontend domain when deployed
 ];
 
 const corsOptions = {
     origin: (origin, callback) => {
+        // Allow requests with no origin (like mobile apps or curl requests)
+        // or if the origin is in the allowedOrigins list.
         if (allowedOrigins.includes(origin) || !origin) {
             callback(null, true);
         } else {
@@ -39,11 +43,9 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // --- Database Connection Pool ---
+// Update the connection to use the DATABASE_URL provided by Railway
 const pool = mysql.createPool({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
+    uri: process.env.DATABASE_URL, // Use the DATABASE_URL environment variable
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0,
@@ -56,15 +58,16 @@ pool.getConnection()
     })
     .catch(err => {
         console.error('Error connecting to the database:', err.message);
-        // Consider exiting the process if database connection fails
-        // process.exit(1);
+        // Consider exiting the process if database connection is critical
+        // process.exit(1); // Uncomment this line if your app cannot function without the database
     });
 
 // --- Nodemailer Email Transporter Setup ---
+// Ensure these environment variables are set in Railway as well if you need email functionality
 const transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
     port: Number(process.env.EMAIL_PORT),
-    secure: process.env.EMAIL_SECURE === 'true',
+    secure: process.env.EMAIL_SECURE === 'true', // Use 'true' or 'false' strings in .env
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASSWORD,
@@ -94,7 +97,7 @@ const authenticateUser = async (req, res, next) => {
         // This is a placeholder. A proper JWT implementation is strongly recommended.
         if (typeof token !== 'string' || token.trim().length === 0) {
              return res.status(401).json({ error: 'Invalid token format' });
-         }
+           }
 
         // INSECURE: User ID directly from token - DO NOT USE IN PRODUCTION
         const [users] = await pool.query('SELECT id FROM users WHERE id = ?', [token]);
@@ -146,6 +149,7 @@ app.post('/api/create-account', async (req, res) => {
         );
 
         // --- Send Welcome Email ---
+        // Ensure EMAIL_FROM and CONTACT_RECEIVING_EMAIL are set in Railway Variables
         const mailOptions = {
             from: process.env.EMAIL_FROM, // Sender address
             to: email, // Recipient address
